@@ -1,238 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-   * {
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
-       font-family: 'Inter', sans-serif;
-   }
-   
-   body {
-       background-color: #f8faff; 
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       min-height: 100vh;
-       width: 100%;
-   }
-   
-   
-   .hero {
-       display: grid;
-       grid-template-columns: 1fr 1fr; /* Duas colunas: Texto e Imagem */
-       grid-template-rows: auto auto auto; 
-       gap: 1.5rem 4rem;
-       max-width: 1200px;
-       width: 90%;
-       padding: 4rem 2rem; /* Aumentei um pouco o padding superior */
-       align-items: center;
-   }
-   
-   /* --- Posicionamento do Grid --- */
-   .hero-title { grid-column: 1; grid-row: 1; }
-   .hero-text  { grid-column: 1; grid-row: 2; }
-   .hero-buttons { grid-column: 1; grid-row: 3; margin-top: 1rem; }
-   
-   .hero-image {
-       grid-column: 2;
-       grid-row: 1 / span 3;
-       display: flex;
-       justify-content: flex-end;
-   }
-   
-   /* --- Estilização Visual Hero --- */
-   .hero-title h1 {
-       font-size: 3.5rem;
-       color: #2d3748;
-       line-height: 1.1;
-       font-weight: 800;
-   }
-   
-   .hero-title h1 span {
-       background: linear-gradient(90deg, #5a8dee 0%, #e6965c 100%);
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-       background-clip: text;
-   }
-   
-   .hero-text p {
-       color: #64748b;
-       font-size: 1.1rem;
-       line-height: 1.6;
-       max-width: 500px;
-   }
-   
-   .hero-image img {
-       width: 100%;
-       max-width: 600px;
-       height: auto;
-       border-radius: 20px;
-       box-shadow: 0 20px 40px rgba(90, 141, 238, 0.15);
-       object-fit: cover;
-   }
-   
-   /* --- Botões Hero --- */
-   .hero-buttons {
-       display: flex;
-       gap: 1rem;
-   }
-   
-   .hero-buttons button {
-       padding: 0.8rem 1.5rem;
-       font-size: 0.95rem;
-       font-weight: 600;
-       border-radius: 8px;
-       cursor: pointer;
-       transition: all 0.3s ease;
-       font-family: 'Inter', sans-serif;
-   }
-   
-   /* Botão Azul */
-   .hero-buttons button:first-child {
-       background-color: #5a8dee;
-       color: white;
-       border: none;
-       display: flex;
-       align-items: center;
-       gap: 0.5rem;
-       box-shadow: 0 4px 14px rgba(90, 141, 238, 0.4);
-   }
-   .hero-buttons button:first-child::after { content: "→"; font-size: 1.1rem; }
-   .hero-buttons button:first-child:hover { background-color: #4a7ac9; transform: translateY(-2px); }
-   
-   /* Botão Outline (Borda) */
-   .hero-buttons button:last-child {
-       background-color: transparent;
-       color: #5a8dee;
-       border: 1px solid #5a8dee;
-   }
-   .hero-buttons button:last-child:hover { background-color: #eff6ff; }
-   
-   
-   /* =========================================
-      3. SEÇÃO MOTIVOS (MEIO)
-      ========================================= */
-   
-   .motivos {
-       background-color: #ffffff; /* Fundo branco para destacar do Hero */
-       width: 100%; /* Ocupa toda a largura da tela */
-       padding: 5rem 2rem;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-   }
-   
-   .motivos-header {
-       text-align: center;
-       margin-bottom: 4rem;
-       max-width: 700px;
-   }
-   
-   .motivos-header h2 {
-       font-size: 2.2rem;
-       color: #2d3748;
-       font-weight: 800;
-       margin-bottom: 0.5rem;
-   }
-   
-   .motivos-header p {
-       color: #64748b;
-       font-size: 1.1rem;
-   }
-   
-   /* --- Cards --- */
-   .card-list {
-       display: flex;
-       justify-content: center;
-       gap: 2rem;
-       width: 100%;
-       max-width: 1200px;
-       flex-wrap: wrap;
-   }
-   
-   .card {
-       background-color: #ffffff;
-       border: 1px solid #e2e8f0;
-       border-radius: 16px;
-       padding: 3rem 2rem;
-       text-align: center;
-       flex: 1;
-       min-width: 300px;
-       max-width: 380px;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-   }
-   
-   .card:hover {
-       transform: translateY(-5px);
-       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-       border-color: #cbd5e0;
-   }
-   
-   .card img {
-       width: 80px;
-       height: 80px;
-       object-fit: contain;
-       margin-bottom: 1.5rem;
-       border-radius: 12px;
-   }
-   
-   .card h3 {
-       color: #2d3748;
-       font-size: 1.25rem;
-       font-weight: 700;
-       margin-bottom: 1rem;
-   }
-   
-   .card p {
-       color: #64748b;
-       font-size: 0.95rem;
-       line-height: 1.6;
-   }
-   
-   
-   /* =========================================
-      4. RESPONSIVIDADE (CELULAR/TABLET)
-      ========================================= */
-   
-   @media (max-width: 768px) {
-       /* Ajustes Hero */
-       .hero {
-           grid-template-columns: 1fr;
-           text-align: center;
-           gap: 2rem;
-           padding-top: 2rem;
-       }
-       .hero-title, .hero-text, .hero-buttons { grid-column: 1; justify-content: center; }
-       .hero-image { grid-column: 1; grid-row: auto; order: -1; justify-content: center; }
-       .hero-title h1 { font-size: 2.5rem; }
-       
-       /* Ajustes Motivos */
-       .motivos { padding: 3rem 1.5rem; }
-       .motivos-header h2 { font-size: 1.8rem; }
-       .card-list { flex-direction: column; align-items: center; }
-       .card { width: 100%; max-width: 100%; }
-   }
+body {
+    background-color: #f8faff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
 
-   /* =========================================
-   3. SEÇÃO HISTÓRIA (NOVA VERSÃO)
-   ========================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.5rem 4rem;
+    max-width: 1200px;
+    width: 90%;
+    padding: 4rem 2rem;
+    align-items: center;
+}
+
+.hero-title { grid-column: 1; grid-row: 1; }
+.hero-text { grid-column: 1; grid-row: 2; }
+.hero-buttons { grid-column: 1; grid-row: 3; margin-top: 1rem; }
+
+.hero-image {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-title h1 {
+    font-size: 3.5rem;
+    color: #2d3748;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.hero-title h1 span {
+    background: linear-gradient(90deg, #5a8dee 0%, #e6965c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text p {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(90, 141, 238, 0.15);
+    object-fit: cover;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-buttons button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-buttons button:first-child {
+    background-color: #5a8dee;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 14px rgba(90, 141, 238, 0.4);
+}
+.hero-buttons button:first-child::after { content: "→"; font-size: 1.1rem; }
+.hero-buttons button:first-child:hover { background-color: #4a7ac9; transform: translateY(-2px); }
+
+.hero-buttons button:last-child {
+    background-color: transparent;
+    color: #5a8dee;
+    border: 1px solid #5a8dee;
+}
+.hero-buttons button:last-child:hover { background-color: #eff6ff; }
+
+
+.motivos {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.motivos-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 700px;
+}
+
+.motivos-header h2 {
+    font-size: 2.2rem;
+    color: #2d3748;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.motivos-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e0;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+}
+
+.card h3 {
+    color: #2d3748;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+        padding-top: 2rem;
+    }
+    .hero-title, .hero-text, .hero-buttons { grid-column: 1; justify-content: center; }
+    .hero-image { grid-column: 1; grid-row: auto; order: -1; justify-content: center; }
+    .hero-title h1 { font-size: 2.5rem; }
+
+    .motivos { padding: 3rem 1.5rem; }
+    .motivos-header h2 { font-size: 1.8rem; }
+    .card-list { flex-direction: column; align-items: center; }
+    .card { width: 100%; max-width: 100%; }
+}
 
 .historia {
-    background-color: #f8faff; 
+    background-color: #f8faff;
     padding: 5rem 2rem;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Centraliza a seção na tela */
-    
-    /* Layout de duas colunas */
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Dando um pouco mais de espaço para o texto */
-    gap: 4rem; 
-    align-items: center; 
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
 }
-
-/* --- LADO ESQUERDO: Título, Parágrafo e Lista (.historia-content) --- */
 
 .historia-header h1 {
     font-size: 2.5rem;
@@ -240,9 +215,9 @@
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1rem;
+    margin-top: 0;
 }
 
-/* Correção 1: Garantindo o Gradiente Laranja/Azul */
 .historia-header h1 span {
     background: linear-gradient(90deg, #5a8dee 0%, #e6965c 100%);
     -webkit-background-clip: text;
@@ -255,52 +230,47 @@
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    max-width: 95%; 
+    max-width: 95%;
 }
 
-/* Lista de Itens (Checkmarks) */
 .historia-info {
     display: flex;
     flex-direction: column;
-    gap: 1.1rem; /* Aumentando um pouco o espaçamento vertical */
+    gap: 1.1rem;
 }
 
 .info-item {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 1rem;
 }
 
-/* Estilo do ícone de Check */
 .info-item .icone {
-    background-color: #e0e7ff; 
-    width: 26px; /* Aumentado para melhor visibilidade */
+    background-color: #e0e7ff;
+    width: 26px;
     height: 26px;
-    border-radius: 50%; 
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
-/* Correção 2: Aumentando o peso do traço do Check */
 .info-item .icone svg {
-    width: 16px; 
+    width: 16px;
     height: 16px;
-    stroke: #5a8dee; 
-    stroke-width: 4; /* Torna o traço mais grosso e visível */
+    stroke: #5a8dee;
+    stroke-width: 4;
 }
 
 .info-item p {
     color: #4a5568;
-    font-size: 1rem; /* Tamanho ajustado */
+    font-size: 1rem;
 }
-
-/* --- LADO DIREITO: Grid de Cards 2x2 (.historia-cards) --- */
 
 .historia-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
@@ -308,17 +278,16 @@
     background-color: #ffffff;
     border-radius: 12px;
     padding: 2.5rem 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra mais sutil */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     border: 1px solid #edf2f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 160px; 
+    min-height: 160px;
 }
 
-/* Cores dos Números */
 .hist-card h2 {
-    font-size: 2.2rem; /* Levemente maior */
+    font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
     line-height: 1;
@@ -339,36 +308,15 @@
 }
 
 
-/* --- Responsividade (Celular) --- */
 @media (max-width: 900px) {
     .historia {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
-    /* Os cards empilham corretamente por causa do media query anterior que você já tinha. */
-}
-/* SEÇÃO HISTÓRIA */
-
-.historia {
-    /* ... outras propriedades ... */
-    
-    /* MUDANÇA CRÍTICA AQUI */
-    align-items: flex-start; /* Alinha o conteúdo da esquerda e direita pelo topo, corrigindo o deslocamento do título */
-    
-    /* ... outras propriedades ... */
 }
 
-/* E, por precaução, ajuste o espaçamento do título */
-.historia-header h1 {
-    /* ... */
-    margin-top: 0; /* Garante que não haja margem superior empurrando o título */
-}
 
-/* =========================================
-   4. SEÇÃO DEPOIMENTOS (FINAL)
-   ========================================= */
-
-   .depoimentos {
+.depoimentos {
     background-color: #ffffff;
     padding: 5rem 2rem;
     width: 100%;
@@ -377,7 +325,6 @@
     align-items: center;
 }
 
-/* Cabeçalho da Seção */
 .depoimentos-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -396,18 +343,15 @@
     font-size: 1.1rem;
 }
 
-/* Container dos Cards (Layout 3 Colunas) */
 .depoimentos-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 100%;
-    /* Ajuste para uma sensação mais compacta e fiel ao original */
-    max-width: 1100px; 
+    max-width: 1100px;
     margin-top: 3rem;
 }
 
-/* Estilo Individual do Depoimento (Card) */
 .depoimento {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -416,68 +360,52 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
 }
 
-/* Estrelas (Rating) */
 .depoimento .estrelas {
-    color: #ff9c28; 
+    color: #ff9c28;
     font-size: 1.2rem;
-    letter-spacing: 0.1rem; 
+    letter-spacing: 0.1rem;
     margin-bottom: 1.5rem;
 }
 
-/* Texto do Depoimento (Quote) */
 .depoimento .quote-text {
-    color: #4a5568; 
+    color: #4a5568;
     font-size: 1rem;
-    /* Ajuste fino para o espaçamento entre linhas */
-    line-height: 1.5; 
-    /* Linha divisória */
-    margin-bottom: 1.5rem; 
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e2e8f0; 
+    border-bottom: 1px solid #e2e8f0;
 }
 
-/* Footer com Nome e Cargo */
 .depoimento .info-footer {
     padding-top: 0.5rem;
 }
 
-/* Nome (Ajustado para ser levemente menor e mais próximo do cargo) */
 .depoimento .info-footer h2 {
     color: #2d3748;
-    font-size: 1.05rem; 
+    font-size: 1.05rem;
     font-weight: 700;
-    margin-bottom: 0.1rem; 
+    margin-bottom: 0.1rem;
 }
 
-/* Cargo/Função (Ajustado para ser menor e mais discreto) */
 .depoimento .info-footer p {
     color: #718096;
-    font-size: 0.85rem; 
+    font-size: 0.85rem;
     font-weight: 500;
 }
 
-/* --- Responsividade --- */
 @media (max-width: 768px) {
-    /* Força o layout para 1 coluna no celular */
     .depoimentos-list {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 }
 
 
-/* =========================================
-   5. SEÇÃO CTA FINAL (CHAMADA PARA AÇÃO)
-   ========================================= */
-
-   .cta-final {
-    /* Fundo Azul com Gradiente */
+.cta-final {
     background: linear-gradient(135deg, #4A89E4 0%, #6BA3FF 100%);
-    color: white; 
-    padding: 6rem 2rem; 
+    color: white;
+    padding: 6rem 2rem;
     width: 100%;
-    
-    /* Centralização de todo o conteúdo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -498,11 +426,10 @@
     max-width: 600px;
 }
 
-/* NOVO: Estilo para o contêiner de botões */
 .cta-buttons {
     display: flex;
-    justify-content: center; /* Centraliza os botões dentro do seu contêiner */
-    gap: 1rem; /* Espaçamento entre os botões */
+    justify-content: center;
+    gap: 1rem;
 }
 
 .cta-buttons button {
@@ -514,9 +441,8 @@
     transition: all 0.3s ease;
 }
 
-/* Botão 1: Agendar Visita (Laranja) */
 .cta-buttons button:first-of-type {
-    background-color: #ff9c28; 
+    background-color: #ff9c28;
     color: white;
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -526,10 +452,9 @@
     background-color: #e68b24;
 }
 
-/* Botão 2: Entrar em Contato (Outline Branco) */
 .cta-buttons button:last-of-type {
     background-color: white;
-    color: #4A89E4; 
+    color: #4A89E4;
     border: 1px solid white;
 }
 
@@ -537,7 +462,6 @@
     background-color: #f0f7ff;
 }
 
-/* --- Responsividade --- */
 @media (max-width: 600px) {
     .cta-final {
         padding: 4rem 1rem;
@@ -548,62 +472,53 @@
     .cta-final p {
         font-size: 1rem;
     }
-    
-    /* MUDANÇA: Empilha os botões no mobile */
+
     .cta-buttons {
         flex-direction: column;
-        width: 80%; /* Ocupa 80% da largura da tela */
+        width: 80%;
         max-width: 300px;
     }
-    
+
     .cta-buttons button {
-        margin: 0.5rem 0; /* Adiciona espaçamento vertical entre os botões empilhados */
+        margin: 0.5rem 0;
         width: 100%;
     }
 }
-/* =========================================
-   6. FOOTER
-   ========================================= */
 
-   .footer {
-    background-color: #ffffff; /* Fundo branco */
-    color: #4a5568; /* Cor principal do texto (cinza escuro) */
-    padding: 3rem 2rem 1rem; /* Espaçamento: topo, laterais, baixo */
+.footer {
+    background-color: #ffffff;
+    color: #4a5568;
+    padding: 3rem 2rem 1rem;
     font-size: 0.95rem;
     width: 100%;
 }
 
 .footer-container {
-    /* Layout de 4 Colunas no Desktop */
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr 1fr; /* Proporções ajustadas */
+    grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #e2e8f0; /* Linha divisória antes do copyright */
+    border-bottom: 1px solid #e2e8f0;
 }
 
-/* --- Títulos e Links --- */
 .footer h2, .footer h3 {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #2d3748; /* Cor dos títulos */
+    color: #2d3748;
 }
 
-/* Título Principal (Escola Futuro) */
 .footer-about h2 {
-    color: #4A89E4; /* Azul primário, como na imagem */
+    color: #4A89E4;
 }
 
-/* Parágrafo de descrição (Footer About) */
 .footer-about p {
     line-height: 1.5;
     max-width: 90%;
 }
 
-/* --- Links Rápidos --- */
 .footer-links ul {
     list-style: none;
 }
@@ -622,22 +537,19 @@
     color: #4A89E4;
 }
 
-/* --- Contato --- */
 .footer-contact p {
-    display: flex; /* Para alinhar o ícone e o texto se estivessem em tags separadas */
+    display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
     line-height: 1.5;
 }
 
-/* Estilização de e-mail e telefone para parecerem links */
-.footer-contact p:nth-child(3), 
+.footer-contact p:nth-child(3),
 .footer-contact p:nth-child(4) {
-    color: #4a5568; /* Cor do link */
+    color: #4a5568;
     text-decoration: none;
 }
 
-/* --- Redes Sociais --- */
 .footer-social p {
     margin-bottom: 0.8rem;
 }
@@ -648,29 +560,26 @@
 }
 
 .footer-social .icons a {
-    /* Estilo do círculo de fundo do ícone */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: #f7f9fc; /* Fundo cinza claríssimo */
+    background-color: #f7f9fc;
     border: 1px solid #e2e8f0;
     transition: background-color 0.2s;
 }
 
 .footer-social .icons a:hover {
-    background-color: #4A89E4; /* Fundo azul no hover */
+    background-color: #4A89E4;
 }
 
 .footer-social .icons img {
-    width: 18px; /* Tamanho do ícone */
+    width: 18px;
     height: 18px;
-    /* Necessário substituir o src="icons/..." por SVG ou ícones de fonte */
 }
 
-/* --- Copyright --- */
 .footer-copy {
     text-align: center;
     padding-top: 1rem;
@@ -678,15 +587,12 @@
     color: #718096;
 }
 
-/* --- Responsividade --- */
 @media (max-width: 900px) {
     .footer-container {
-        /* Empilha as colunas em telas menores */
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-    
-    /* Move a seção de contato e redes sociais para baixo no mobile */
+
     .footer-contact {
         order: 3;
     }
@@ -697,17 +603,14 @@
 
 @media (max-width: 600px) {
     .footer-container {
-        /* Uma coluna por item em celular */
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
-    /* Centraliza os ícones sociais no celular */
+
     .footer-social .icons {
         justify-content: center;
     }
-    
-    /* Garante que o texto fique centralizado */
+
     .footer-about p {
         margin: 0 auto 1rem;
         max-width: 80%;
