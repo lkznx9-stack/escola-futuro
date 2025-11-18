@@ -1,6 +1,4 @@
-/* =========================================
-   1. CONFIGURAÇÕES GLOBAIS E RESET
-   ========================================= */
+
    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
    * {
@@ -11,18 +9,14 @@
    }
    
    body {
-       background-color: #f8faff; /* Fundo geral */
+       background-color: #f8faff; 
        display: flex;
-       flex-direction: column; /* EMPILHA as seções verticalmente */
-       align-items: center; /* Centraliza as seções na largura */
+       flex-direction: column;
+       align-items: center;
        min-height: 100vh;
        width: 100%;
    }
    
-   
-   /* =========================================
-      2. SEÇÃO HERO (TOPO)
-      ========================================= */
    
    .hero {
        display: grid;
